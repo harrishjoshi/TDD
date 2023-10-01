@@ -1,0 +1,9 @@
+services:
+  postgres: # Service name, you can refer to this service as "postgres"
+    image: 'postgres:16.0' # Use the PostgreSQL 16.0 Docker image
+    environment:
+      - 'POSTGRES_DB=posts' # Set the name of the PostgreSQL database to "posts"
+      - 'POSTGRES_PASSWORD=secret' # Set the PostgreSQL user password to "secret"
+      - 'POSTGRES_USER=postgres' # Set the PostgreSQL username to "postgres"
+    ports:
+      - '5432:5432' # Map host port 5432 to container port 5432 for PostgreSQL
